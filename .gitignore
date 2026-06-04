@@ -1,0 +1,29 @@
+# Target build folders
+**/target/
+*.jar
+*.war
+*.ear
+
+# IDE specific files
+.idea/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+dependency-reduced-pom.xml
+
+# Local configuration and logs
+.env
+*.log
+logs/
+
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# Crash logs
+clear_dump.txt
+hs_err_pid*
