@@ -23,7 +23,10 @@ git branch -M main
 echo.
 echo [Step 5] Adding remote GitHub repository URL...
 git remote remove origin >nul 2>&1
-git remote add origin https://github.com/rimjhimkrishna/student-management-api.git
+echo.
+echo Please enter your new GitHub repository URL (e.g., https://github.com/username/new-repo.git)
+set /p REPO_URL="Repository URL: "
+git remote add origin %REPO_URL%
 
 echo.
 echo [Step 6] Pushing code to GitHub...
@@ -41,7 +44,7 @@ if %ERRORLEVEL% neq 0 (
 echo.
 echo ======================================================================
 echo [SUCCESS] Code successfully pushed to:
-echo https://github.com/rimjhimkrishna/student-management-api
+echo %REPO_URL%
 echo ======================================================================
 echo.
 pause
