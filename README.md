@@ -1,21 +1,47 @@
-# Enterprise E-Commerce Microservices Platform
+<div align="center">
+  <img src="ecom_microservices_thumbnail.png" alt="Platform Overview & Architecture Banner" width="100%" />
+  
+  <h1>🛍️ Enterprise E-Commerce Microservices Platform</h1>
 
-[![Java 17](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk17/)
-[![Spring Boot 3.2.x](https://img.shields.io/badge/Spring_Boot-3.2.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
-[![Spring Cloud 2023.0.1](https://img.shields.io/badge/Spring_Cloud-2023.0.1-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-cloud)
-[![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-3.x-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![Redis](https://img.shields.io/badge/Redis-7.x-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
-[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+  <p>
+    A production-ready, enterprise-grade E-Commerce platform built from scratch utilizing a highly scalable, resilient <b>Microservices Architecture</b>.
+  </p>
 
-A production-ready, enterprise-grade E-Commerce platform built from scratch utilizing a highly scalable, resilient **Microservices Architecture**. This repository features service-discovery, API gateway-level security, role-based access control (RBAC), database connection pooling, distributed caching, async event-driven messaging, and comprehensive containerization.
+<!-- Badges -->
+<p>
+  <a href="https://openjdk.org/projects/jdk17/"><img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 17" /></a>
+  <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/Spring_Boot-3.2.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Boot" /></a>
+  <a href="https://spring.io/projects/spring-cloud"><img src="https://img.shields.io/badge/Spring_Cloud-2023.0.1-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Cloud" /></a>
+  <br />
+  <a href="https://kafka.apache.org/"><img src="https://img.shields.io/badge/Apache_Kafka-3.x-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka" /></a>
+  <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" /></a>
+  <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/MongoDB-6.0-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" /></a>
+  <a href="https://redis.io/"><img src="https://img.shields.io/badge/Redis-7.x-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" /></a>
+  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
+</p>
+
+</div>
 
 ---
 
-## 📸 Platform Showcase & Architecture
+## 📑 Table of Contents
+- [Architecture & Workflow](#-architecture--workflow)
+- [Key Features](#-key-features)
+- [Codebase Structure](#-codebase-structure)
+- [Technology Stack](#-technology-stack)
+- [Getting Started](#-getting-started)
+  - [Docker Compose (Recommended)](#-option-a-running-with-docker-compose-recommended)
+  - [Local Setup](#-option-b-running-locally-for-active-development)
+- [API Reference Directory](#-api-reference-directory)
+- [Event-Driven Architecture](#-asynchronous-event-driven-architecture)
+- [Testing & QA](#-testing-suite--quality-assurance)
+- [FAQ & Troubleshooting](#-faq--troubleshooting)
 
-![Platform Overview & Architecture Banner](ecom_microservices_thumbnail.png)
+---
+
+## 🏗️ Architecture & Workflow
+
+This repository features service-discovery, API gateway-level security, role-based access control (RBAC), database connection pooling, distributed caching, async event-driven messaging, and comprehensive containerization.
 
 ### Logical Workflow Diagram
 
@@ -87,39 +113,35 @@ A production-ready, enterprise-grade E-Commerce platform built from scratch util
 
 ---
 
-## 📂 Codebase Directory Layout
+## 📂 Codebase Structure
 
 ```text
 ecommerce-microservices/
-├── api-gateway/            # Spring Cloud Gateway routing & JWT security verification
-├── discovery-server/       # Eureka Discovery Server registry
-├── user-service/           # User administration, authentication, and JWT lifecycle
-├── product-service/        # Product inventory catalog & Redis cache management
-├── order-service/          # Order placement, price snapshotting & Feign client integrations
-├── notification-service/   # Async Kafka consumer & MongoDB notification history logs
-├── docker-compose.yml      # Complete infrastructure configuration (PostgreSQL, MongoDB, Kafka, Redis)
-├── .env.example            # Configuration variables template
-└── README.md               # Documentation
+├── api-gateway/            # 🌐 Gateway routing & JWT security verification
+├── discovery-server/       # 📡 Eureka Discovery Server registry
+├── user-service/           # 👤 User administration, authentication, and JWT lifecycle
+├── product-service/        # 📦 Product inventory catalog & Redis cache management
+├── order-service/          # 🛒 Order placement, price snapshotting & Feign clients
+├── notification-service/   # 🔔 Async Kafka consumer & MongoDB notification logs
+├── docker-compose.yml      # 🐳 Complete infrastructure configuration
+├── .env.example            # ⚙️ Configuration variables template
+└── README.md               # 📖 Documentation
 ```
 
 ---
 
-## 🛠️ Technology Stack Breakdown
+## 🛠️ Technology Stack
 
-| Component | Technology | Detail / Version |
+| Layer | Technology | Description / Version |
 | :--- | :--- | :--- |
-| **Runtime Environment** | Java 17 | OpenJDK 17 with Spring Boot 3.2.x |
-| **Build Automation** | Maven | Monorepo structure, separate `pom.xml` per service module |
-| **Discovery Registry** | Spring Cloud Eureka | Netflix Eureka discovery client & server |
-| **API Routing & Filter** | Spring Cloud Gateway | Path routing, CORS filter configurations, and JWT authorization |
-| **Secure Token Auth** | Spring Security + JWT | HMAC-SHA256 signing, Token-based Stateless authorization |
-| **Relational Database** | PostgreSQL 15 | Separate databases for Users, Products, and Orders |
-| **Document Database** | MongoDB 6.0 | Stores notification records with dynamic JSON models |
-| **Distributed Caching** | Redis 7.x | Caching product listings and managing API rate limits |
-| **Event Broker** | Apache Kafka 3.x | Confluent Community Kafka & Zookeeper orchestration |
-| **Connection Pooling** | HikariCP | Maximum pool size = 10, minimum idle = 5, timeout = 30s |
-| **API Playground** | OpenAPI 3 / Swagger | Interactive routes playground at `/swagger-ui.html` for each service |
-| **Containerization** | Docker | Multi-stage Dockerfiles coordinated via Docker Compose |
+| **Core** | Java 17, Spring Boot 3.2.x | High-performance backend framework |
+| **Infrastructure** | Spring Cloud (Eureka, Gateway) | Service discovery and API routing |
+| **Messaging** | Apache Kafka 3.x | Scalable event-driven messaging |
+| **Data Persistence** | PostgreSQL 15, MongoDB 6.0 | Polyglot persistence (Relational & NoSQL) |
+| **Caching** | Redis 7.x | High-speed distributed caching |
+| **Security** | Spring Security, JWT | Stateless token-based security |
+| **DevOps** | Docker, Docker Compose | Containerization and orchestration |
+| **Tooling** | Maven, OpenAPI 3 (Swagger) | Build automation and API documentation |
 
 ---
 
@@ -170,10 +192,6 @@ To tear down the containers and preserve persistent database volumes:
 ```bash
 docker compose down
 ```
-To delete the containers along with the persistent database volumes:
-```bash
-docker compose down -v
-```
 
 ---
 
@@ -181,45 +199,25 @@ docker compose down -v
 
 If you prefer to run the microservices locally to debug in your IDE:
 
-#### 1. Spin Up Only the Middleware Services
-Use Docker Compose to run only the databases, cache, and messaging queue:
-```bash
-docker compose up -d postgres-user postgres-product postgres-order mongodb redis zookeeper kafka
-```
-
-#### 2. Configure Local Environment Variables
-Create a local `.env` file at the root or inject variables into your IDE runner:
-*   Use `localhost` instead of container names (e.g., `redis` -> `localhost`, `kafka` -> `localhost`).
-*   Ensure the databases, Redis, and Kafka correspond to the mapped ports (Postgres User: `5433`, Postgres Product: `5434`, Postgres Order: `5435`, Redis: `6379`, MongoDB: `27017`, Zookeeper: `2181`, Kafka: `9092`).
-
-#### 3. Build the Core Services
-Compile and package the microservices using Maven:
-```bash
-mvn clean install -DskipTests
-```
-
-#### 4. Start Services in Order
-For proper routing and registration, run the modules in this sequence:
-
-```bash
-# Terminal 1: Start Discovery Server (Registry)
-cd discovery-server && mvn spring-boot:run
-
-# Terminal 2: Start API Gateway (Router & Filter)
-cd api-gateway && mvn spring-boot:run
-
-# Terminal 3: Start User Management & Auth
-cd user-service && mvn spring-boot:run
-
-# Terminal 4: Start Product Catalog
-cd product-service && mvn spring-boot:run
-
-# Terminal 5: Start Order Processing
-cd order-service && mvn spring-boot:run
-
-# Terminal 6: Start Notification Logs Consumer
-cd notification-service && mvn spring-boot:run
-```
+1. **Spin Up Infrastructure:** Use Docker Compose to run only the databases, cache, and messaging queue:
+   ```bash
+   docker compose up -d postgres-user postgres-product postgres-order mongodb redis zookeeper kafka
+   ```
+2. **Configure Environment:** In your `.env`, use `localhost` instead of container names (e.g., `redis` -> `localhost`, `kafka` -> `localhost`).
+3. **Build Core Services:**
+   ```bash
+   mvn clean install -DskipTests
+   ```
+4. **Start Services in Order:**
+   ```bash
+   # In separate terminals:
+   cd discovery-server && mvn spring-boot:run
+   cd api-gateway && mvn spring-boot:run
+   cd user-service && mvn spring-boot:run
+   cd product-service && mvn spring-boot:run
+   cd order-service && mvn spring-boot:run
+   cd notification-service && mvn spring-boot:run
+   ```
 
 ---
 
@@ -228,9 +226,9 @@ cd notification-service && mvn spring-boot:run
 All microservice APIs are routed through the **API Gateway** on Port `8080`.
 
 <details>
-<summary>🔑 Authentication & User Management Service (Port 8081 via Gateway 8080)</summary>
+<summary><b>🔑 Authentication & User Management Service</b> <i>(Port 8081 via Gateway 8080)</i></summary>
 
-| HTTP Method | Route Endpoint | Authentication | Allowed Roles | Description |
+| Method | Endpoint | Auth | Roles | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `POST` | `/api/v1/auth/register` | Public | All | Register a new user account. |
 | `POST` | `/api/v1/auth/login` | Public | All | Log in to receive Access Token & Refresh Token. |
@@ -244,9 +242,9 @@ All microservice APIs are routed through the **API Gateway** on Port `8080`.
 </details>
 
 <details>
-<summary>🛍️ Product Catalog & Inventory Service (Port 8082 via Gateway 8080)</summary>
+<summary><b>🛍️ Product Catalog & Inventory Service</b> <i>(Port 8082 via Gateway 8080)</i></summary>
 
-| HTTP Method | Route Endpoint | Authentication | Allowed Roles | Description |
+| Method | Endpoint | Auth | Roles | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `GET` | `/api/v1/products` | Public | All | Get active products (paginated, sorted, filtered by category). |
 | `GET` | `/api/v1/products/{id}` | Public | All | Retrieve specific product details by ID. |
@@ -259,9 +257,9 @@ All microservice APIs are routed through the **API Gateway** on Port `8080`.
 </details>
 
 <details>
-<summary>💳 Order Transaction Service (Port 8083 via Gateway 8080)</summary>
+<summary><b>💳 Order Transaction Service</b> <i>(Port 8083 via Gateway 8080)</i></summary>
 
-| HTTP Method | Route Endpoint | Authentication | Allowed Roles | Description |
+| Method | Endpoint | Auth | Roles | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `POST` | `/api/v1/orders` | Secure | USER, ADMIN | Place a new order (verifies stock & triggers checkout). |
 | `GET` | `/api/v1/orders` | Secure | USER, ADMIN | View order history for logged-in user. |
@@ -273,9 +271,9 @@ All microservice APIs are routed through the **API Gateway** on Port `8080`.
 </details>
 
 <details>
-<summary>🔔 Notification Service (Port 8084 via Gateway 8080)</summary>
+<summary><b>🔔 Notification Service</b> <i>(Port 8084 via Gateway 8080)</i></summary>
 
-| HTTP Method | Route Endpoint | Authentication | Allowed Roles | Description |
+| Method | Endpoint | Auth | Roles | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `GET` | `/api/v1/notifications/my` | Secure | USER, ADMIN | Fetch database logs of notifications sent to the user. |
 
@@ -283,11 +281,11 @@ All microservice APIs are routed through the **API Gateway** on Port `8080`.
 
 ---
 
-## ⚡ Asynchronous Event-Driven Architectures
+## ⚡ Asynchronous Event-Driven Architecture
 
 The system uses event queues to pass orders and system changes asynchronously. The following JSON schemas are used across Kafka topics:
 
-### 1. Topic: `order.created`
+### Topic: `order.created`
 Fired immediately upon checkout. Consumed by `Notification Service`.
 ```json
 {
@@ -304,31 +302,6 @@ Fired immediately upon checkout. Consumed by `Notification Service`.
   ],
   "totalAmount": 499.99,
   "createdAt": "2026-06-03T23:40:00"
-}
-```
-
-### 2. Topic: `order.status.updated`
-Fired when administrators transition order state.
-```json
-{
-  "orderId": "5fa23d11-5465-4700-9831-cd9a77ef1c08",
-  "userId": "1b988f0a-3cc9-482a-bc91-236b325201fa",
-  "userEmail": "customer@example.com",
-  "oldStatus": "CONFIRMED",
-  "newStatus": "SHIPPED",
-  "updatedAt": "2026-06-03T23:45:00"
-}
-```
-
-### 3. Topic: `order.cancelled`
-Fired when a user cancels an order.
-```json
-{
-  "orderId": "5fa23d11-5465-4700-9831-cd9a77ef1c08",
-  "userId": "1b988f0a-3cc9-482a-bc91-236b325201fa",
-  "userEmail": "customer@example.com",
-  "reason": "Cancelled by user request",
-  "cancelledAt": "2026-06-03T23:50:00"
 }
 ```
 
@@ -352,16 +325,18 @@ mvn clean test
 
 ## ❓ FAQ & Troubleshooting
 
-#### 1. Why are my services failing to start when running `docker compose up`?
-Verify that no other processes on your host system are using the required ports (e.g. Postgres on `5433`/`5434`/`5435`, Redis on `6379`, Mongo on `27017`, or Gateway on `8080`). You can kill existing processes or edit the ports in `.env` and `docker-compose.yml`.
+> **1. Why are my services failing to start when running `docker compose up`?**
+> Verify that no other processes on your host system are using the required ports (e.g. Postgres on `5433`/`5434`/`5435`, Redis on `6379`, Mongo on `27017`, or Gateway on `8080`).
 
-#### 2. How long does Eureka take to register the microservices?
-After the microservices start, they can take up to 30 seconds to appear on Eureka dashboard (`http://localhost:8761`). If you try to route requests through API Gateway too early, you might receive `503 Service Unavailable`.
+> **2. How long does Eureka take to register the microservices?**
+> After the microservices start, they can take up to 30 seconds to appear on Eureka dashboard (`http://localhost:8761`). If you try to route requests through API Gateway too early, you might receive `503 Service Unavailable`.
 
-#### 3. How do I test the APIs?
-Import the provided Postman collection file `ecommerce_microservices.postman_collection.json` into Postman. It contains pre-configured requests for register, login, profile updates, product creation, order checks, and cancellation flows.
+> **3. How do I test the APIs?**
+> Import the provided Postman collection file `ecommerce_microservices.postman_collection.json` into Postman. It contains pre-configured requests for register, login, profile updates, product creation, order checks, and cancellation flows.
 
 ---
 
-## 👥 Contributors & Author
-*   **Rimjhim Krishna** - [@rimjhimkrishna](https://github.com/rimjhimkrishna)
+<div align="center">
+  <b>Developed by</b> <a href="https://github.com/rimjhimkrishna">Rimjhim Krishna</a><br/>
+  <i>If you find this project useful, please consider giving it a ⭐!</i>
+</div>
