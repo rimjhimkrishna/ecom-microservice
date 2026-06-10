@@ -339,5 +339,6 @@ mvn clean test
 
 <div align="center">
   <b>Developed by</b> <a href="https://github.com/rimjhimkrishna">Rimjhim Krishna</a><br/>
+  <i>Looking for a Backend Developer? Let's connect!</i><br/>
   <i>If you find this project useful, please consider giving it a ⭐!</i>
 </div>
