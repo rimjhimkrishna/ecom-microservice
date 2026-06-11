@@ -338,7 +338,20 @@ mvn clean test
 ---
 
 <div align="center">
+  <h3>🤝 Open to Freelance & Full-Time Opportunities</h3>
+  <p>Looking for a skilled <b>Backend Developer (Java, Spring Boot, Microservices)</b> for your project?<br/> <i>Let's build something amazing together!</i></p>
+  
+  <a href="https://github.com/rimjhimkrishna">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Upwork-Hire_Me-14A800?style=for-the-badge&logo=upwork&logoColor=white" alt="Upwork" />
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
   <b>Developed by</b> <a href="https://github.com/rimjhimkrishna">Rimjhim Krishna</a><br/>
-  <i>Looking for a Backend Developer? Let's connect!</i><br/>
   <i>If you find this project useful, please consider giving it a ⭐!</i>
 </div>
